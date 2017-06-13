@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.qf.administrator.baozou.activity.CommentActivity">
+    <RelativeLayout
+        android:id="@+id/rl_head_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="?attr/colortoolbar">
+
+        <ImageView
+            android:id="@+id/img_opendraw"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/abc_ic_ab_back_mtrl_am_alpha" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/img_opendraw"
+            android:text="评论"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+    <!--<TextView
+        android:layout_centerInParent="true"
+        android:textColor="#dfdddd"
+        android:id="@+id/tv_hint"
+        android:text="登录后才能查看我的评论"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />-->
+    <android.support.design.widget.TabLayout
+        android:layout_below="@id/rl_head_bar"
+        android:id="@+id/conment_tablayou"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="?attr/colortoolbar"
+        app:tabSelectedTextColor="?attr/colortoolbar"
+        app:tabTextColor="?attr/colortoolbar">
+
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/conment_tablayou"
+        android:layout_margin="5dp"
+        android:id="@+id/conment_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v4.view.ViewPager>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:minHeight="25dp"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ed_input_comment"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:hint="忍不住吐个槽"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ig_send_comment"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_wordsend"/>
+    </LinearLayout>
+</RelativeLayout>

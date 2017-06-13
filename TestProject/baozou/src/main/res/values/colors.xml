@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Light Theme-->
+    <color name="colorPrimary">#FB3D4F</color>
+    <color name="colorPrimaryDark">#FB3D4F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colortoolbar">#FB3D4F</color>
+    <color name="backgroud_red">#FB3D4F</color>
+    <color name="tv_self_login_color">#858585</color>
+    <color name="tv_self_number_color">#2B2B2B</color>
+    <color name="tv_self_spyt_color">#9D9D9D</color>
+    <color name="tv_self_missionpro_color">#CACACA</color>
+    <color name="tv_self_mission_text_color">#7B7B7B</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="tv_mission_complete_color">#FFE1474C</color>
+    <color name="tv_bz_login_hint_color">#C3C3C3</color>
+    <color name="tv_comment_name">#6F6F6F</color>
+    <color name="tv_comment_content">#8A8A8A</color>
+    <color name="tv_commment_title_bg">#EEEEEE</color>
+    <!--Night Theme-->
+    <color name="color_Light_Background_White">#fff</color>
+    <color name="color_Light_text_black">#000</color>
+    <color name="color_Light_text_gray">#909090</color>
+    <color name="color_Light_back_black">#333333</color>
+    <color name="color_Light_text_backGray">#e6e3e3</color>
+
+
+
+    <!--主题切换时需要（避免白屏）-->
+    <color name="transparent">#0000</color>
+</resources>
+
+

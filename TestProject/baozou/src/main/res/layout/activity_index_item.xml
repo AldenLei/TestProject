@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context="com.qf.administrator.baozou.activity.IndexItemActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colortoolbar">
+
+        <ImageView
+            android:id="@+id/img_item_back"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/abc_ic_ab_back_mtrl_am_alpha" />
+
+
+        <ImageView
+            android:id="@+id/img_setting_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/abc_ic_menu_moreoverflow_mtrl_alpha" />
+
+        <ImageView
+            android:id="@+id/img_star_love"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/img_setting_more"
+            android:src="@mipmap/abc_btn_rating_star_off_mtrl_alpha" />
+
+        <ImageView
+            android:id="@+id/img_comment"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/img_star_love"
+            android:src="@mipmap/btn_actionbar_comment_nor" />
+
+        <ImageView
+            android:id="@+id/img_vote"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/img_comment"
+            android:src="@mipmap/btn_actionbar_like_nor" />
+
+        <TextView
+            android:id="@+id/tv_comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/img_comment"
+            android:text="0"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_vote_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/img_vote"
+            android:text="0"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+    <RelativeLayout
+    android:id="@+id/rl_loading_anim"
+    android:layout_below="@id/rl_detail_head"
+    android:layout_width="match_parent"
+    android:background="@color/tv_commment_title_bg"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ig_placeholder_loading"
+        android:layout_centerInParent="true"
+        android:background="@color/tv_commment_title_bg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/loadinganim"/>
+    <TextView
+        android:layout_below="@id/ig_placeholder_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="别催，加载着呢..."/>
+</RelativeLayout>
+
+    <com.qf.administrator.baozou.views.ScrollWebView
+        android:layout_below="@id/rl_detail_head"
+        android:id="@+id/item_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"></com.qf.administrator.baozou.views.ScrollWebView>
+
+    <ScrollView
+        android:layout_below="@id/item_webview"
+        android:id="@+id/sr_view"
+        android:fillViewport="true"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_title_author"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+
+                    <ImageView
+                        android:id="@+id/rl_detail_head_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:padding="10dp"
+                        android:text="这是新闻的title"
+                        android:textColor="@color/background_white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <com.qf.administrator.baozou.views.CircleImageView
+                        android:id="@+id/cv_detail_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@mipmap/ic_launcher"
+                        app:border_color="@color/background_white" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/cv_detail_icon"
+                        android:text="Alden"
+                        android:textColor="@color/tv_self_login_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_time_ago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_detail_name"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@id/cv_detail_icon"
+                        android:text="4小时前"
+                        android:textColor="@color/tv_bz_login_hint_color"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_user_tougao_title_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_user_tougao_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tv_self_number_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_user_tougao_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/tv_self_missionpro_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:visibility="gone">
+
+            </LinearLayout>
+            <!--正文完结后评论和分享的UI-->
+            <LinearLayout
+                android:id="@+id/ll_comment"
+                android:orientation="vertical"
+                android:background="@color/background_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:background="@color/tv_bz_login_hint_color"
+                    android:layout_height="1px" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="分享到"
+                    android:textColor="@color/tv_bz_login_hint_color"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:background="@color/tv_bz_login_hint_color"
+                    android:layout_height="1px" />
+            </LinearLayout>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_friend_circle"
+                    android:textSize="10sp"
+                    android:button="@null"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="朋友圈"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/tv_bz_login_hint_color"
+                    android:drawableTop="@mipmap/btn_article_wechatmoment_nor"/>
+                <RadioButton
+                    android:id="@+id/rb_qq_zone"
+                    android:textSize="10sp"
+                    android:button="@null"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="QQ空间"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/tv_bz_login_hint_color"
+                    android:drawableTop="@mipmap/btn_article_qqzone_nor"/>
+                <RadioButton
+                    android:id="@+id/rb_sina_weibo"
+                    android:textSize="10sp"
+                    android:button="@null"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="新浪微博"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/tv_bz_login_hint_color"
+                    android:drawableTop="@mipmap/btn_article_sinaweibo_nor"/>
+                <RadioButton
+                    android:id="@+id/rb_more"
+                    android:textSize="10sp"
+                    android:button="@null"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="更多"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/tv_bz_login_hint_color"
+                    android:drawableTop="@mipmap/btn_article_share_more_nor"/>
+            </RadioGroup>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/tv_bz_login_hint_color"/>
+            <!--中间省略头像-->
+
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tv_commment_title_bg"
+                    android:drawableLeft="@mipmap/icon_article_hotcomment"
+                    android:text="热门评论"
+                    android:drawablePadding="10dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_detail_hot_comment"
+                    android:background="@color/background_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tv_commment_title_bg"
+                    android:drawableLeft="@mipmap/icon_article_newcomment"
+                    android:text="最新评论"
+                    android:drawablePadding="10dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:background="@color/background_white"
+                    android:id="@+id/rv_detail_latest_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+            <Button
+
+                android:id="@+id/btn_see_all_comment"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textColor="@color/background_white"
+                android:background="@drawable/login_button"
+                android:text="查看所有评论"/>
+        </LinearLayout>
+
+    </ScrollView>
+    <!--这Button 在相对布局不适用在加载解析的内容，因为上下文没有margin，兼容就在scrollview下也
+    放一个button，只是根据页面加载是否是webview还是解析的内容来决定是否隐藏-->
+    <Button
+        android:id="@+id/btn_see_all_comment_web"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:textColor="@color/background_white"
+        android:background="@drawable/login_button"
+        android:visibility="gone"
+        android:text="查看所有评论"/>
+    <com.qf.administrator.baozou.views.CircleImageView
+        app:border_color="#0000"
+        app:border_width="0dp"
+        android:id="@+id/fab_add_comment"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:src="@mipmap/btn_article_share"/>
+
+</RelativeLayout>

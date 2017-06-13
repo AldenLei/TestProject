@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="10dp"
+    android:background="#fff"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/img_recycleview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="每个人发送到re方电费发送到"
+        android:textColor="#4d4b4b"
+        android:textSize="16sp"
+        android:layout_alignTop="@+id/img_recycleview"
+        android:layout_toRightOf="@+id/img_recycleview"
+        android:layout_toEndOf="@+id/img_recycleview" />
+    <RelativeLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_title"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_toRightOf="@id/img_recycleview">
+
+        <com.qf.administrator.baozou.views.CircleImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/img_recycleview_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:border_color="#fff"
+            app:border_width="0dp" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/img_recycleview_icon"
+            android:text="21dogt"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/tv_author"
+            android:textSize="12sp"
+            android:text="推荐" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

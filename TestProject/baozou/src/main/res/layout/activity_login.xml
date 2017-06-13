@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_white"
+    tools:context="com.qf.administrator.baozou.activity.LoginActivity">
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/backgroud_red"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ig_self_menu"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:src="@drawable/yyb_appdetail_showmore" />
+
+        <ImageView
+            android:id="@+id/ig_self_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_back_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ig_self_back"
+            android:text="登录"
+            android:textColor="#fff"
+            android:textSize="21sp" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/login_appname"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginTop="100dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/background_white"
+        android:background="@drawable/login_button"
+        android:text="暴走漫画"/>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#3000"
+            android:layout_height="1px" />
+        <TextView
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="社交平台账号登录"/>
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#3000"
+            android:layout_height="1px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ig_login_sina"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@mipmap/login_sina"/>
+        <ImageView
+            android:id="@+id/ig_login_wechat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@mipmap/wechat_login"/>
+        <ImageView
+            android:id="@+id/ig_login_qq"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@mipmap/login_qq"/>
+    </LinearLayout>
+</LinearLayout>

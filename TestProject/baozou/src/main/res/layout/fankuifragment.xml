@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:divider="#3ccc"
+        android:dividerHeight="0dp"
+        android:id="@+id/team_singlechat_id_showlist"
+        android:background="#3ccc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+    <LinearLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/feedback_contact"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/feedback_contact"/>
+        <EditText
+            android:id="@+id/team_singlechat_id_edit"
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="尽情吐槽吧~"
+            />
+        <ImageView
+            android:id="@+id/team_singlechat_id_send"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/btn_wordsend"/>
+
+    </LinearLayout>
+</RelativeLayout>

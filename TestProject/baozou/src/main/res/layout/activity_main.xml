@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.qf.administrator.baozou.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--界面显示的FrameLayout-->
+        <FrameLayout
+            android:id="@+id/frame_replace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+        <!--左侧隐藏的界面-->
+        <RelativeLayout
+
+            android:id="@+id/draw_left"
+            android:layout_width="260dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="#fff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抽屉布局" />
+            <RelativeLayout
+                android:id="@+id/rl_top"
+
+                android:background="@color/backgroud_red"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+                <com.qf.administrator.baozou.views.CircleImageView
+                    app:border_width="1dp"
+                    app:border_color="@color/backgroud_red"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/ic_account_mything"
+                    android:id="@+id/circleview"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp" />
+                <TextView
+                    android:layout_marginTop="65dp"
+                    android:textColor="#ffff"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/circleview"
+                    android:text="登录"
+                    android:id="@+id/tv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioGroup
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:drawableLeft="@mipmap/icon_sidebar_favourite"
+                        android:textColor="#fff"
+                        android:text="收藏"
+                        android:button="@null"
+                        android:id="@+id/rb_collect"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:drawableLeft="@mipmap/icon_sidebar_comment"
+                        android:textColor="#fff"
+                        android:text="评论"
+                        android:button="@null"
+                        android:id="@+id/rb_coment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:drawableLeft="@mipmap/icon_sidebar_history"
+                        android:textColor="#fff"
+                        android:text="阅读"
+                        android:button="@null"
+                        android:id="@+id/rb_read"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </RelativeLayout>
+            <RadioGroup
+                android:id="@+id/rd_group"
+                android:layout_below="@id/rl_top"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:drawablePadding="45dp"
+                    android:id="@+id/rb_home"
+                    android:text="首页"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:drawablePadding="45dp"
+                    android:id="@+id/rb_bang"
+                    android:text="排行榜"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:drawablePadding="45dp"
+                    android:id="@+id/rb_channal"
+                    android:text="频道"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+
+                    android:drawablePadding="45dp"
+                    android:id="@+id/rb_search"
+                    android:text="搜索"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:drawablePadding="45dp"
+                    android:id="@+id/rb_setting"
+                    android:text="设置"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:drawablePadding="45dp"
+                    android:id="@+id/rb_down"
+                    android:text="离线下载"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <View
+                    android:background="#e4e3e3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+            </RadioGroup>
+            <Button
+                android:paddingLeft="10dp"
+                android:drawablePadding="45dp"
+                android:layout_below="@id/rd_group"
+                android:textSize="16sp"
+                android:background="#0000"
+                android:id="@+id/tv_night"
+                android:text="夜间模式"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
